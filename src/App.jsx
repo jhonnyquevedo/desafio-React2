@@ -10,9 +10,10 @@ function App() {
   const [succes, setSucces] = useState("")
   return (
     <>
-      <div>
+      <div className="p-4 bg-white border rounded-3">
+        <h2 className="card-title">Crea una cuenta</h2>
         <Registro error={error} setError={setError} succes={succes} setSucces={setSucces} />
-     </div>
+      </div>
     </>
   )
 }

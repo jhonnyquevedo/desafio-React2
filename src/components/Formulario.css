@@ -1,0 +1,28 @@
+.iconos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.icono{
+    font-size: 25px;
+}
+
+.error {
+    padding: 10px;
+    color: white;
+    background-color: rgb(253, 76, 76);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    }
+
+.succes {
+    padding: 10px;
+    color: white;
+    background-color: rgb(62, 184, 38);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    }
