@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Formulario() {
+function Formulario({setError, setSucces}) {
   //Expresión regular para validar que el campo de email contenga el formato adecuado
   const regexParaEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
   //Expresión regular para validar el campo de contraseña solicita un mínimo de 8 caracteres y un máximo de 15 , al menos una letra minúscula, al menos una letra mayúscula, al menos 1 dígito (número), al menos 1 caracter especial, que no existan espacios en blanco y al menos 1 símbolo para más seguridad fuente https://es.stackoverflow.com/questions/4300/expresiones-regulares-para-contrase%C3%B1a-en-base-a-una-politica.
@@ -15,7 +15,7 @@ function Formulario() {
     //   el botón de tipo submit por defecto ocasiona que el navegador realice una petición GET y recargue el sitio, aquí se previene este comportamiento 
     e.preventDefault()
     //Se elimina el mensaje de succes
-    setSucces3("")
+    setSucces("")
 
     // Se validan los input
     if (nombre === "") {
@@ -56,7 +56,6 @@ function Formulario() {
           <input name="Contraseña" type="text" placeholder="Contraseña" onChange={(e) => setContraseña(e.target.value)} value={contraseña} />
           <input name="Confirmacion" type="text" placeholder="Confirma tu contraseña" onChange={(e) => setConfirmacion(e.target.value)} value={confirmacion} />
           <button type="submit" className="btn btn-success">Registrarse</button>
-          <h3>{error}</h3>
         </form>
       </div>
     </>

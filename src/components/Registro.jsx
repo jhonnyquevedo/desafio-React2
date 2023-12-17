@@ -5,7 +5,8 @@ import React from 'react'
 // Se importan los 3 íconos utilizados
 import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-function Registro() {
+function Registro({error, setError, succes, setSucces}) {
+
 
     return (
         <>
@@ -16,8 +17,8 @@ function Registro() {
                 <SocialButton icono={faLinkedin}/>
             </div>
 
-            <Formulario  />
-            <Alert />
+            <Formulario setError={setError} setSucces={setSucces} />
+            <Alert error={error} succes={succes}/>
         </>
     )
 }
