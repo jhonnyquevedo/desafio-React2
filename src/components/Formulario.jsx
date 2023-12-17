@@ -56,7 +56,7 @@ function Formulario() {
           <input name="Contraseña" type="text" placeholder="Contraseña" onChange={(e) => setContraseña(e.target.value)} value={contraseña} />
           <input name="Confirmacion" type="text" placeholder="Confirma tu contraseña" onChange={(e) => setConfirmacion(e.target.value)} value={confirmacion} />
           <button type="submit" className="btn btn-success">Registrarse</button>
-          <h3>{error}</h3>
+          
         </form>
       </div>
     </>
